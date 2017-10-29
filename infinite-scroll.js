@@ -180,7 +180,10 @@ Blaze.TemplateInstance.prototype.infiniteScroll = function infiniteScroll(option
    */
   this.getLimit = function () {
     return limit.get();
-  }
+  };
+  this.tryLoadMore = function(){
+	loadMore();
+  };
 };
 
 Template.infiniteScroll.onDestroyed(function infiniteScrollDestroyed() {
